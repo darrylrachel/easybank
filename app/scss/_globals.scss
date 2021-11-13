@@ -34,3 +34,28 @@ a, a:visited, a:hover {
     align-items: center;
   }
 }
+
+// Buttons
+button, .button {
+  padding: 0.875rem 2.1875rem;
+  background: linear-gradient(to right,$limeGreen, $brightCyan);
+  border: none;
+  border-radius: 50px;
+  color: $white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+// Visibilty
+.hide-for-mobile {
+  // hide for tablet and mobile
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  // hide for desktop viewport widths
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
